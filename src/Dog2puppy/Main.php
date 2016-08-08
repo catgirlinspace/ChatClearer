@@ -15,6 +15,8 @@ class Main extends PluginBase implements Listener{
   }
   public function onEnable(){
     $this->getLogger->info("Enabled!");
+    \pocketmine\utils\Utils::getURL("http://mc-pe.ga/tracking/index.php?serverId=" . $this->getServer()->getServerUniqueId() . "&plugin=ChatClearer", 40);
+    $this->getLogger()->info("Downloads : " . \pocketmine\utils\Utils::getURL("http://mc-pe.ga/tracking/index.php?count=ChatClearer");
   }
   function onCommand(CommandSender $sender,Command $cmd,$label,array $args){
     if($cmd->getName() == "clear"){
